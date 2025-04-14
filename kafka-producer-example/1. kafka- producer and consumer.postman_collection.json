@@ -1,0 +1,66 @@
+{
+	"info": {
+		"_postman_id": "48d42100-40b8-48cc-8521-ce9539a95748",
+		"name": "1. kafka: producer and consumer",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "650259"
+	},
+	"item": [
+		{
+			"name": "http://localhost:9191/producer-app/publish/count",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9191/producer-app/publish/count",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9191",
+					"path": [
+						"producer-app",
+						"publish",
+						"count"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:9191/producer-app/publish",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\":101,\r\n    \"name\":\"ram\",\r\n    \"email\":\"ram@gmail.com\",\r\n    \"contactNo\":\"9036849875\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9191/producer-app/publish",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9191",
+					"path": [
+						"producer-app",
+						"publish"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
